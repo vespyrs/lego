@@ -2,9 +2,16 @@
   font-family: League Gothic;
   src: url('fonts/LeagueGothic/League_Gothic_Regular.woff');
 }
+.donate-header-image {
+  width: 100%;
+}
 
 .donate-has-image {
   .donate-title {
+    display: none;
+  }
+  .donate-header-image-mobile {
+    display: flex;
     @include media-breakpoint-up(sm) {
       display: none;
     }
@@ -12,12 +19,19 @@
   .donate-header-image {
     display: none;
     @include media-breakpoint-up(sm) {
-      display: block;
-      width: 100%;
+      display: flex;
       max-width: 650px;
-      margin: 0 auto;
-      height: auto;
     }
+  }
+  img {
+     display: flex;
+     object-fit: contain;
+     flex-flow: row nowrap;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 auto;
+     height: auto;
+     align-items: center;
   }
 }
 
@@ -428,7 +442,7 @@
     text-transform: uppercase;
     button {
       text-transform: uppercase;
-      width: 160px;
+      min-width: 160px;
       vertical-align: top;
       line-height: 20px;
       color: $blue-violet;
@@ -797,5 +811,11 @@
     .btn {
       text-transform: uppercase;
     }
+  }
+}
+
+.donor-faq {
+  li {
+    font-size: 30px;
   }
 }

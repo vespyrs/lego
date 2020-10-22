@@ -7380,6 +7380,9 @@ main {
 .bg-darker {
   background-color: #401753; }
 
+.bg-black {
+  background-color: black; }
+
 /*
  * Typography
  */
@@ -8056,11 +8059,11 @@ a.side-nav.active {
 
 @font-face {
   font-family: WhiteonBlack;
-  /* https://open-foundry.com/fonts/league_gothic_italic */
+  /* by imagex-fonts.com */
   src: url("./fonts/WhiteonBlack/WhiteOnBlack.ttf"); }
 @font-face {
   font-family: TerminalGrotesque;
-  /* https://open-foundry.com/fonts/league_gothic_italic */
+  /* https://open-foundry.com/fonts/terminal_grotesque_open */
   src: url("./fonts/grotesque/terminal-grotesque_open.otf"); }
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
@@ -8102,7 +8105,7 @@ a.side-nav.active {
 .rectangle {
   background-image: url("./images/home/png/tape.png");
   color: black;
-  padding: 10px;
+  padding: 15px 40px 0px 15px;
   font-size: 2em;
   font-family: "TerminalGrotesque", sans-serif;
   text-decoration: none;
@@ -8165,18 +8168,31 @@ a.side-nav.active {
 @font-face {
   font-family: League Gothic;
   src: url("fonts/LeagueGothic/League_Gothic_Regular.woff"); }
-@media (min-width: 576px) {
-  .donate-has-image .donate-title {
-    display: none; } }
+.donate-header-image {
+  width: 100%; }
+
+.donate-has-image .donate-title {
+  display: none; }
+.donate-has-image .donate-header-image-mobile {
+  display: flex; }
+  @media (min-width: 576px) {
+    .donate-has-image .donate-header-image-mobile {
+      display: none; } }
 .donate-has-image .donate-header-image {
   display: none; }
   @media (min-width: 576px) {
     .donate-has-image .donate-header-image {
-      display: block;
-      width: 100%;
-      max-width: 650px;
-      margin: 0 auto;
-      height: auto; } }
+      display: flex;
+      max-width: 650px; } }
+.donate-has-image img {
+  display: flex;
+  object-fit: contain;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  height: auto;
+  align-items: center; }
 
 .header-description {
   margin-bottom: 30px; }
@@ -8541,7 +8557,7 @@ a.side-nav.active {
     text-transform: uppercase; }
     .donate-form .payment-method-area button {
       text-transform: uppercase;
-      width: 160px;
+      min-width: 160px;
       vertical-align: top;
       line-height: 20px;
       color: #8a2be2;
@@ -8826,6 +8842,9 @@ a.side-nav.active {
       margin: 40px auto; }
     .donate-page .thank-you .btn {
       text-transform: uppercase; }
+
+.donor-faq li {
+  font-size: 30px; }
 
 .cryptocurrency {
   padding-top: 40px;
