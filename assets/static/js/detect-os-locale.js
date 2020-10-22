@@ -83,7 +83,7 @@ else {
 }
 
 window.onload = function() {
-  document.getElementById('downloadButton').insertAdjacentHTML('afterbegin', label);
+  document.getElementById('buttonBr').insertAdjacentHTML('beforebegin', label);
   document.getElementById('downloadButton').insertAdjacentHTML('beforeend', language);
   document.getElementById("downloadIcon").classList.add(id);
   document.getElementById('downloadButton').href = 'https://www.torproject.org' + download_link;
