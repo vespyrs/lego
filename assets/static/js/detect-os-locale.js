@@ -9,7 +9,7 @@ if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
 function detectLang() {
   if (navigator.languages != undefined) {
-    return navigator.languages[0]
+    return navigator.languages[0];
   }
   else {
     return navigator.language;
@@ -44,7 +44,7 @@ console.log("userLocaleStripped is " + userLocaleStripped);
 console.log(altData);
 console.log("filter is " + filter);
 console.log("altLang is " + altLang);
-console.log("fulLang is " + language)
+console.log("fulLang is " + language);
 
 if (OSName ==  "Windows"){
     if (navigator.userAgent.indexOf("WOW64") != -1 || 
@@ -57,15 +57,15 @@ if (OSName ==  "Windows"){
     }
     var download_link = download_prefix + 'torbrowser-install-' + arch + version + '_' + altLang + '.exe';
     var sig_link = download_link + '.asc';
-    var label = "Download for Windows";
+    var label = "Windows";
     var id = "fa-windows-png";
     }
 
 else if (OSName == "MacOS"){
     var download_link = download_prefix + 'TorBrowser-' + version + '-osx64' + '_' + altLang + '.dmg';
     var sig_link = download_link + '.asc';
-    var label = "Download for OS X";
-    var id = "fa-apple-png"
+    var label = "OS X";
+    var id = "fa-apple-png";
     }
 
 else {
@@ -74,12 +74,12 @@ else {
       var arch = 'linux64';
     }
     else {
-      var arch = 'linux32'
+      var arch = 'linux32';
     } 
     var download_link = download_prefix + 'tor-browser-linux64-' + arch + '-' + version + '_' + altLang + '.tar.xz';
     var sig_link = download_link + '.asc';
-    var label = "GNU/Linux"
-    var id = "fa-linux-png"
+    var label = "GNU/Linux";
+    var id = "fa-linux-png";
 }
 
 window.onload = function() {
